@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/Ajax_1.0.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome tooooo <%= title %></p>
+
+    <button id="btn">点击发送跨域请求</button>
+
+    <script>
+    
+      var btn = document.getElementById('btn');
+
+      btn.onclick = function(){
+        Ajax().get("http://localhost:3000/json1",function(meg){
+            console.log(meg);
+        })
+      }
+      
+    </script>
+
+  </body>
+</html>
